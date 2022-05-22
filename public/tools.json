@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Cordless Compact Drill Machine ",
+        "price": "200",
+        "minimumOrderQuantity": "50",
+        "availableOrderQuantity": "5000",
+        "description": "Stanley SCD12S2-B5 Compact Drill is designed for lightweight applications and toning. Using a lithium-ion battery is 10.8 Volt type. Slide-in protected electronic protection system that protects the battery from overload.",
+        "img": "https://i.ibb.co/bWTgh2c/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "SDS Max Chipping Hammer",
+        "price": "300",
+        "minimumOrderQuantity": "50",
+        "availableOrderQuantity": "5000",
+        "description": "SDS Max chuck suitable for most common accessories. Class-leading 1010W motor delivers outstanding performance for light demolition, surface preparation or chiseling. Ergonomic and compact design maximizes control and offers easy access to confined spaces.",
+        "img": "https://i.ibb.co/DtHv6yY/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Hammer Drill Machine",
+        "price": "100",
+        "minimumOrderQuantity": "50",
+        "availableOrderQuantity": "5000",
+        "description": "Voltage: 220v-240v~50-60Hz Impact power: 1010w No load speed: 0-2800rpm Max drilling capacity: 13mm Variable speed Froward/Reverse switch",
+        "img": "https://i.ibb.co/52fXnc4/3.jpg"
+    }
+    
+]

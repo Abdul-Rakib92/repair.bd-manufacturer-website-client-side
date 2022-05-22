@@ -1,5 +1,6 @@
 import React from "react";
 import banner from '../../assets/images/banner.jpg'
+import ButtonPrimary from "../Shared/ButtonPrimary";
 
 const Banner = () => {
   return (
@@ -15,7 +16,7 @@ const Banner = () => {
             <p class="py-6 text-xl">
             Repair.BD has been selling power tools in Bangladesh for the last 10 years. We have industrial pressure washers, automatic drill machine & battery drill machine. We also have rotary hammer drill machines, bosch drill machine. But wait, there is more, demolition hammer drills etc. If you have any queries at all please contact us now.
             </p>
-            <button class="btn btn-primary text-white">Get Started</button>
+            <ButtonPrimary>Get Started</ButtonPrimary>
           </div>
         </div>
       </div>
