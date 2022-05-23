@@ -22,7 +22,6 @@ const Tools = () => {
                             key ={tool.id}
                             tool={tool}
                         >
-                            
                         </Tool>)
                     }
                 </div>
