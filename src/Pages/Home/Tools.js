@@ -12,7 +12,7 @@ const Tools = () => {
 
     return (
         <div>
-            <h1 className='text-primary text-center mt-3 text-3xl font-bold'>Tools</h1>
+            <h1 className='text-primary text-center mt-3 text-4xl font-bold'>Tools</h1>
 
             <div className='grid grid-row grid-flow-col gap-5'>
 
