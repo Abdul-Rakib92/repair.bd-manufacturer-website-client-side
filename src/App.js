@@ -4,6 +4,7 @@ import About from './Pages/About/About';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound';
+import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
        <Route path='*' element={<NotFound></NotFound>}></Route>
 
      </Routes>
+
+     <Footer></Footer>
       
     </div>
   );
