@@ -21,7 +21,7 @@ const Tool = ({ tool }) => {
 
 
   return (
-    <div class="card card-compact  bg-base-100 shadow-xl m-6">
+    <div class="card card-compact border border-red-400  bg-base-100 shadow-xl m-6">
       <figure>
         <img
           src={img}

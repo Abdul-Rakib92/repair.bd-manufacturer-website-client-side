@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import Contact from './Contact';
 import Owner from './Owner';
 import Summary from './Summary';
 import Tools from './Tools';
@@ -11,6 +12,7 @@ const Home = () => {
             <Tools></Tools>
             <Summary></Summary>
             <Owner></Owner>
+            <Contact></Contact>
         </div>
     );
 };

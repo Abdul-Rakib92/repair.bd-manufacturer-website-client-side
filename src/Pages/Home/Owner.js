@@ -3,7 +3,7 @@ import owner from "../../assets/images/owner.jpg";
 
 const Owner = () => {
   return (
-    <div>
+    <div className="px-8">
       <div className="my-7">
         <h1 className="text-primary text-center my-10 text-4xl font-bold">
           Owner
