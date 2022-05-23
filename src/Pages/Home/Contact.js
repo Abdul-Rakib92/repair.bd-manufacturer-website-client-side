@@ -1,5 +1,6 @@
 import React from "react";
 import contact from "../../assets/images/contact.jpg";
+import ButtonPrimary from "../Shared/ButtonPrimary";
 
 const Contact = () => {
   return (
@@ -16,17 +17,32 @@ const Contact = () => {
 
           <div className="w-2/3 text-center ml-10">
             <div class="form-control">
-              
-              
-                <input type="text" name="" id="" placeholder="Your Name" className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Your Name"
+                className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4"
+              />
 
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Your Email"
+                className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4"
+              />
 
-                <input type="text" name="" id="" placeholder="Your Email" className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4" />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                placeholder="Your Feedback"
+                className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4"
+              ></textarea>
 
-
-                <textarea name="" id="" cols="30" rows="5" placeholder="Your Feedback" className="border-solid border-2 border-sky-800 rounded-2xl my-3 p-4"></textarea>
-              
-
+              <ButtonPrimary>Submit</ButtonPrimary>
             </div>
           </div>
         </div>
