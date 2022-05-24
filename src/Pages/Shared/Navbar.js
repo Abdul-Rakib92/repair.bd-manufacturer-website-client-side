@@ -1,7 +1,16 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
   return (
     <div className="navbar bg-neutral text-base-100">
       <div className="navbar-start">
@@ -29,11 +38,11 @@ const Navbar = () => {
             <li>
               <Link to="/home">Home</Link>
             </li>
-            
+
             <li>
               <Link to="/about">About</Link>
             </li>
-            
+
             <li>
               <Link to="/blog">Blog</Link>
             </li>
@@ -42,40 +51,52 @@ const Navbar = () => {
               <Link to="/profile">My Profile</Link>
             </li>
 
+            
             <li>
-              <Link to="/login">Login</Link>
+              {user ? (
+                <button className="btn btn-ghost" onClick={logout}>
+                  logout
+                </button>
+              ) : (
+                <Link to="/login">Login</Link>
+              )}
             </li>
-
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           Repair. <span className="text-accent">BD</span>
         </Link>
       </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
 
-            <li>
-              <Link to="/profile">My Profile</Link>
-            </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
 
-            <li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+
+          <li>
+            <Link to="/profile">My Profile</Link>
+          </li>
+
+          <li>
+            {user ? (
+              <button className="btn btn-ghost" onClick={logout}>
+                logout
+              </button>
+            ) : (
               <Link to="/login">Login</Link>
-            </li>
+            )}
+          </li>
         </ul>
       </div>
-
     </div>
   );
 };

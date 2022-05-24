@@ -5,7 +5,7 @@ const NotFound = () => {
     return (
         <div>
             <h2 className='text-center text-4xl font-bold my-3'>This page is Not Available...</h2>
-            <img className='w-100' src={notfound} alt="" />
+            <img className=' h-screen lg:pl-16' src={notfound} alt="" />
         </div>
     );
 };
