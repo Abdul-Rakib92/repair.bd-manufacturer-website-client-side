@@ -16,7 +16,7 @@ const Contact = () => {
           </div>
 
           <div className="w-2/3 text-center ml-10">
-            <div class="form-control">
+            <div className="form-control">
               <input
                 type="text"
                 name=""

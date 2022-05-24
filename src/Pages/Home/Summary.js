@@ -22,35 +22,35 @@ const Summary = () => {
 
         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 px-7 gap-2'>
 
-        <div class="stats shadow text-center">
-          <div class="stat">
-            <div class="stat-title pl-16 "><FlagIcon className="w-28 h-20 text-pink-600 "></FlagIcon></div>
-            <div class="stat-value text-5xl">72</div>
-            <div class="stat-desc text-pink-600 font-bold text-2xl">Countries</div>
+        <div className="stats shadow text-center">
+          <div className="stat">
+            <div className="stat-title pl-16 "><FlagIcon className="w-28 h-20 text-pink-600 "></FlagIcon></div>
+            <div className="stat-value text-5xl">72</div>
+            <div className="stat-desc text-pink-600 font-bold text-2xl">Countries</div>
           </div>
         </div>
         
-        <div class="stats shadow  text-center">
-          <div class="stat">
-          <div class="stat-title pl-16 "><ChartPieIcon className="w-28 h-20 text-pink-600 "></ChartPieIcon></div>
-            <div class="stat-value text-5xl">550+</div>
-            <div class="stat-desc text-pink-600 font-bold text-2xl">Complete Projects</div>
+        <div className="stats shadow  text-center">
+          <div className="stat">
+          <div className="stat-title pl-16 "><ChartPieIcon className="w-28 h-20 text-pink-600 "></ChartPieIcon></div>
+            <div className="stat-value text-5xl">550+</div>
+            <div className="stat-desc text-pink-600 font-bold text-2xl">Complete Projects</div>
           </div>
         </div>
 
-        <div class="stats shadow  text-center">
-          <div class="stat">
-            <div class="stat-title pl-16 "><EmojiHappyIcon className="w-28 h-20 text-pink-600 "></EmojiHappyIcon></div>
-            <div class="stat-value text-5xl">280+</div>
-            <div class="stat-desc text-pink-600 font-bold text-2xl">Happy Clients</div>
+        <div className="stats shadow  text-center">
+          <div className="stat">
+            <div className="stat-title pl-16 "><EmojiHappyIcon className="w-28 h-20 text-pink-600 "></EmojiHappyIcon></div>
+            <div className="stat-value text-5xl">280+</div>
+            <div className="stat-desc text-pink-600 font-bold text-2xl">Happy Clients</div>
           </div>
         </div>
 
-        <div class="stats shadow  text-center">
-          <div class="stat">
-            <div class="stat-title pl-16 "><ThumbUpIcon className="w-28 h-20 text-pink-600 "></ThumbUpIcon></div>
-            <div class="stat-value text-5xl">520+</div>
-            <div class="stat-desc text-pink-600 font-bold text-2xl">Positive Feedback</div>
+        <div className="stats shadow  text-center">
+          <div className="stat">
+            <div className="stat-title pl-16 "><ThumbUpIcon className="w-28 h-20 text-pink-600 "></ThumbUpIcon></div>
+            <div className="stat-value text-5xl">520+</div>
+            <div className="stat-desc text-pink-600 font-bold text-2xl">Positive Feedback</div>
           </div>
         </div>
         </div>
