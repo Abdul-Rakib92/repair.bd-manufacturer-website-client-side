@@ -4,9 +4,12 @@ import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import AddProfile from './Pages/Dashboard/AddProfile';
+import AddReview from './Pages/Dashboard/AddReview';
 import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
+import MyProfiles from './Pages/Dashboard/MyProfiles';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
@@ -34,6 +37,24 @@ function App() {
        <Route path='/addProduct' element={
           <RequireAuth>
             <AddProduct></AddProduct>
+          </RequireAuth>
+        }></Route>
+
+       <Route path='/myProfile' element={
+          <RequireAuth>
+            <MyProfiles></MyProfiles>
+          </RequireAuth>
+        }></Route>
+
+       <Route path='/addProfile' element={
+          <RequireAuth>
+            <AddProfile></AddProfile>
+          </RequireAuth>
+        }></Route>
+
+       <Route path='/addReview' element={
+          <RequireAuth>
+            <AddReview></AddReview>
           </RequireAuth>
         }></Route>
 

@@ -33,10 +33,27 @@ const handleOrder = event =>{
             event.target.reset();
         }
     })
+
+    const myOrder = {
+        name: user.displayName,
+        email: user.email,
+        tool: tool.name,
+        toolId: toolId,
+        quantity: event.target.quantity.value,
+        address: event.target.address.value,
+        phone: event.target.phone.value
+    }
+    axios.post('http://localhost:5000/myOrder', myOrder)
+    .then(response =>{
+        const {data} = response;
+        if(data.insertedId){
+            toast('Your order is placed!!!');
+            event.target.reset();
+        }
+    })
+
+
 }
-
-
-
 
 
   return (
