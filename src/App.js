@@ -3,7 +3,9 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -28,9 +30,22 @@ function App() {
        }></Route>
        <Route path='/about' element={<About></About>}></Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
+
+       <Route path='/addProduct' element={
+          <RequireAuth>
+            <AddProduct></AddProduct>
+          </RequireAuth>
+        }></Route>
+
        <Route path="/myOrders" element={
           <RequireAuth>
             <MyOrder></MyOrder>
+          </RequireAuth>
+        }></Route>
+
+       <Route path="/manageProduct" element={
+          <RequireAuth>
+            <ManageProduct></ManageProduct>
           </RequireAuth>
         }></Route>
 

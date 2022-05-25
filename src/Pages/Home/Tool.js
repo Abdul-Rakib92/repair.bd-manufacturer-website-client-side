@@ -25,7 +25,7 @@ const Tool = ({ tool }) => {
       <figure>
         <img
           src={img}
-          alt="Shoes"
+          alt=""
         />
       </figure>
       <div className="card-body">
