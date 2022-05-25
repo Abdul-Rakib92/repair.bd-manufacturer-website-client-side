@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Tool = ({ tool }) => {
   const {
-    id,
+    _id,
     name,
     img,
     description,
@@ -15,7 +15,7 @@ const Tool = ({ tool }) => {
   const navigate = useNavigate();
 
   const navigateToToolDetail = id =>{
-    navigate(`/purchase/${id}`);
+    navigate(`/tool/${id}`);
 }
 
 
@@ -36,7 +36,7 @@ const Tool = ({ tool }) => {
         <p>{description}</p>
         
         <div className="card-actions justify-end">
-          <button onClick={() => navigateToToolDetail(id)} className="btn btn-primary">Buy Now</button>
+          <button onClick={() => navigateToToolDetail(_id)} className="btn btn-primary">Buy Now</button>
         </div>
       </div>
     </div>
