@@ -35,11 +35,11 @@ const ManageAllOrder = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center text-2xl font-bold text-blue-700 mt-5">
+    <div className=" h-screen">
+      <h2 className="text-center text-2xl font-bold text-blue-700  ">
         Manage Order
       </h2>
-      <h2 className="text-xl font-bold m-5">Your orders: {orders.length}</h2>
+      <h2 className="text-xl font-bold mt-5">Your orders: {orders.length}</h2>
 
       {orders.map((order) => (
         <div className="grid grid-cols-1  md:grid-cols-2" key={order._id}>

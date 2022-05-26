@@ -13,7 +13,7 @@ const Footer = () => {
         <p>Ground Floor, RM Center, 101 Gulshan Avenue, Dhaka</p>
 
         <p className=" font-bold">
-            &copy; 2022 Ahammed furniture warehouse All rights reserved
+            &copy; 2022 Repair.BD All rights reserved
         </p>
       </div>
 

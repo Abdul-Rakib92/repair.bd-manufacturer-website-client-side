@@ -41,7 +41,7 @@ const MyOrder = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       <h2 className="text-center text-2xl font-bold text-blue-700 mt-5">
         My Order
       </h2>

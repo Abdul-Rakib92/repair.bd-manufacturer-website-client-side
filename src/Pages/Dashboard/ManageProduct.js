@@ -27,7 +27,7 @@ const ManageProduct = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       <h2 className="text-center text-2xl font-bold text-blue-700 mt-5">Manage Product</h2>
 
       <div className="grid grid-row grid-flow-col gap-5">

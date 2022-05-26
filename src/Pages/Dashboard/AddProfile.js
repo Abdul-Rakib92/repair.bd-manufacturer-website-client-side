@@ -28,7 +28,7 @@ const AddProfile = () => {
 
 
     return (
-        <div className="w-3/5 mx-auto">
+        <div className="w-3/5 mx-auto h-screen">
       <h2 className='text-center text-3xl font-bold text-blue-700 mt-5'>Create Profile</h2>
       
       <form className="card card-compact form-control m-10  p-8 bg-gray-400 border-2 border-red-400" onSubmit={handleSubmit(onSubmit)}>

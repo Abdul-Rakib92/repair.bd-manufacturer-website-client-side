@@ -27,7 +27,7 @@ const AddReview = () => {
   };
 
   return (
-    <div>
+    <div className="w-3/5 mx-auto h-screen">
       <h2 className='text-center text-3xl font-bold text-blue-700 mt-5'>Add Your Review</h2>
 
       <form
