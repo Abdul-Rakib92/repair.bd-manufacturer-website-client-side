@@ -1,26 +1,40 @@
 import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-import useProfiles from "../../hooks/useProfiles";
+// import useProfiles from "../../hooks/useProfiles";
+import Loading from "../Shared/Loading";
+import MyProfile from "./MyProfile";
 // import MyProfile from "./MyProfile";
 
 const MyProfiles = () => {
-  const [myProfiles, setMyProfiles] = useProfiles;
+  // const [myProfiles, setMyProfiles] = useProfiles;
+
+  const { data: myProfiles, isLoading } = useQuery('myProfiles', () => fetch('http://localhost:5000/myProfile').then(res => res.json()));
+
+
+
+  if (isLoading) {
+    return <Loading></Loading>
+}
 
   return (
-    <div>
+    <div className="h-screen">
       <h2 className="text-primary text-center m-3 text-4xl font-bold">
         {" "}
         My profile
       </h2>
 
-      <Link to={`/addProfile`}>
-        <button className="btn btn-primary w-40  border-0 rounded-xl p-3 mx-auto mt-5">
-          Add New Item
+
+
+      <Link to={`/dashboard/addProfile`}>
+        <button className="btn btn-primary text-slate-50 w-40  border-0 rounded-xl p-3 mx-auto mt-5">
+          Add Profile
         </button>
       </Link>
 
       {myProfiles.map((myProfile) => (
-        <div key={myProfile._id}>
+        <div key={myProfile._id}
+        myProfile={myProfile}>
           <div className="card card-compact border border-red-400  bg-base-100 shadow-xl m-6">
             <figure>
               <img src={myProfile.img} alt="" />
@@ -39,6 +53,7 @@ const MyProfiles = () => {
           </div>
         </div>
       ))}
+      
     </div>
   );
 };

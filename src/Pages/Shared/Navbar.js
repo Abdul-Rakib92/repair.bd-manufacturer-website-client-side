@@ -9,6 +9,8 @@ const Navbar = () => {
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken');
+
   };
 
   const headerItems = (
@@ -45,7 +47,7 @@ const Navbar = () => {
         )}
       </li>
 
-      <li className="mt-2">{user?.email}</li>
+      <li className="mt-2">{user?.displayName}</li>
     </>
   );
 
