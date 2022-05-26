@@ -16,7 +16,9 @@ import Users from './Pages/Dashboard/Users';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 import RequireAuth from './Pages/Login/RequireAuth';
+import MyPortfolio from './Pages/MyPortfolio';
 import NotFound from './Pages/NotFound';
 import Purchase from './Pages/Purchase';
 import Footer from './Pages/Shared/Footer';
@@ -36,6 +38,7 @@ function App() {
        }></Route>
        <Route path='about' element={<About></About>}></Route>
        <Route path='blog' element={<Blog></Blog>}></Route>
+       <Route path='myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
 
        {/* <Route path='/addProduct' element={
           <RequireAuth>
@@ -63,7 +66,7 @@ function App() {
 
             <Route path='myOrders' element={<MyOrder></MyOrder>}></Route>
             
-            <Route path='users' element={<Users></Users>}></Route>
+            <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
 
         </Route>
 

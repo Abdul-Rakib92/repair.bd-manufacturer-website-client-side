@@ -28,7 +28,7 @@ const Navbar = () => {
       </li>
 
       <li>
-        <Link to="/myProfile">My Profile</Link>
+        <Link to="/myPortfolio">My Portfolio</Link>
       </li>
 
       {user && (

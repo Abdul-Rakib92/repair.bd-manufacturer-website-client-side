@@ -27,7 +27,7 @@ const AddReview = () => {
   };
 
   return (
-    <div className="w-3/5 mx-auto h-screen">
+    <div className="w-full mx-auto h-screen">
       <h2 className='text-center text-3xl font-bold text-blue-700 mt-5'>Add Your Review</h2>
 
       <form
@@ -56,9 +56,9 @@ const AddReview = () => {
         />
         
         <input
-          className="bg-slate-800 text-white text-lg w-1/2 mx-auto font-bold mb-3 border-2 border-lime-800 rounded-full p-4"
+          className="bg-slate-800 text-white text-lg w-1/2 mx-auto font-bold mb-3 border-2 border-lime-800 rounded-2xl p-4"
           type="submit"
-          value="Add Product"
+          value="Add Review"
         />
       </form>
     </div>
