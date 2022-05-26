@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    useCreateUserWithEmailAndPassword,
+  useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
@@ -8,6 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useNavigate } from "react-router-dom";
+import useToken from "../../hooks/useToken";
 
 const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -21,16 +22,14 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const [token]  = useToken(user || gUser);
+
 
   let errorMessage;
   const navigate = useNavigate();
 
-  
-    if (user || gUser) {
-        console.log(user || gUser);
-      
-    }
   
 
   if (loading || gLoading || updating) {
@@ -40,15 +39,20 @@ const Register = () => {
   if (error || gError || updateError) {
     errorMessage = (
       <p className="text-red-500">
-        <small>{error?.message || gError?.message || updateError?.message}</small>
+        <small>
+          {error?.message || gError?.message || updateError?.message}
+        </small>
       </p>
     );
   }
 
+  if (token) {
+    navigate("/home");
+}
+
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigate("/home");
   };
   return (
     <div className="flex justify-center items-center h-screen">
@@ -72,7 +76,6 @@ const Register = () => {
                     value: true,
                     message: "Name Required",
                   },
-                 
                 })}
               />
               <label className="label">
@@ -81,7 +84,6 @@ const Register = () => {
                     {errors.name.message}
                   </span>
                 )}
-               
               </label>
             </div>
 
@@ -160,7 +162,7 @@ const Register = () => {
           </form>
 
           <p>
-          Already have an account?{" "}
+            Already have an account?{" "}
             <Link className="text-primary" to="/login">
               Please login
             </Link>
