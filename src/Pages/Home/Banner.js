@@ -9,8 +9,9 @@ const Banner = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={banner}
-            className="max-w-xl rounded-lg shadow-2xl"
+            className="max-w-xl rounded-lg shadow-2xl" alt="" 
           />
+          
           <div className="mr-5">
             <h1 className="text-5xl font-bold"> <span className="text-orange-500">Wellcome To Repair. <span className="text-accent">BD</span></span></h1>
             <p className="py-6 text-xl">
