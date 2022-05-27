@@ -11,7 +11,6 @@ import { toast } from "react-toastify";
 const Purchase = () => {
   const { toolId } = useParams();
   const [tool] = usePurchase(toolId);
-//   const [user, loading, error] = useAuthState(auth);
 const [user] = useAuthState(auth);
 
 const handleOrder = event =>{
@@ -21,6 +20,7 @@ const handleOrder = event =>{
         email: user.email,
         tool: tool.name,
         toolId: toolId,
+        price: tool.price,
         quantity: event.target.quantity.value,
         address: event.target.address.value,
         phone: event.target.phone.value
@@ -39,6 +39,7 @@ const handleOrder = event =>{
         email: user.email,
         tool: tool.name,
         toolId: toolId,
+        price: tool.price,
         quantity: event.target.quantity.value,
         address: event.target.address.value,
         phone: event.target.phone.value
@@ -58,7 +59,9 @@ const handleOrder = event =>{
 
   return (
     <div>
-      <div className="card card-compact border border-red-400 w-2/4  bg-base-100 shadow-xl m-6">
+      <h1 className='text-primary text-center mt-3 text-2xl font-bold'>Product detail</h1>
+      
+      <div className="card card-compact border border-red-400 w-2/4 mx-auto  bg-base-100 shadow-xl m-6">
         <figure>
           <img src={tool.img} alt="Shoes" />
         </figure>
@@ -71,7 +74,9 @@ const handleOrder = event =>{
         </div>
       </div>
 
-      <form onSubmit={handleOrder} className="card card-compact form-control m-10 w-1/4 pl-8 bg-red-100 border border-red-400">
+      <h1 className='text-primary text-center mt-3 text-2xl font-bold'>Order please</h1>
+
+      <form onSubmit={handleOrder} className="card card-compact form-control m-10 w-1/4 mx-auto pl-8 bg-red-100 border border-red-400">
         <input
           type="text"
           name="name"
@@ -94,6 +99,12 @@ const handleOrder = event =>{
           disabled
           readOnly
           value={tool.name || ''} 
+          className="input input-bordered mt-5 w-full max-w-xs"
+        />
+        <input
+          type="number"
+          name="price"
+          value={tool.price || ''} 
           className="input input-bordered mt-5 w-full max-w-xs"
         />
         <input

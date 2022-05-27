@@ -44,6 +44,7 @@ const AddProfile = () => {
           placeholder="Email"
           type="email"
           name="email"
+          value={user?.email}
           {...register("email")}
         />
         <textarea
