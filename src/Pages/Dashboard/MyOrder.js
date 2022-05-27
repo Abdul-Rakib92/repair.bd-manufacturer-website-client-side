@@ -54,7 +54,7 @@ const MyOrder = () => {
   const handleMyOrderDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `http://localhost:5000/myOrder/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",
@@ -88,6 +88,8 @@ const MyOrder = () => {
               <th>Quantity</th>
               <th>Address</th>
               <th>Phone</th>
+              <th>Payment</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -114,38 +116,27 @@ const MyOrder = () => {
                       </p>
                       <p>
                         Transaction id:{" "}
-                        <span className="text-success">{myOrder.transactionId}</span>
+                        <span className="text-success">
+                          {myOrder.transactionId}
+                        </span>
                       </p>
                     </div>
                   )}
                 </td>
-                <td><button
-                className="bg-red-600 text-white text-sm p-1 border-0 rounded-md "
-                onClick={() => handleMyOrderDelete(myOrder._id)}
-              >
-                Delete
-              </button></td>
+                <td>
+                  <button
+                    className="bg-red-600 text-white text-sm p-1 border-0 rounded-md "
+                    onClick={() => handleMyOrderDelete(myOrder._id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-        
       </div>
-      
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // <div className="h-screen">
     //   <h2 className="text-center text-2xl font-bold text-blue-700 mt-5">

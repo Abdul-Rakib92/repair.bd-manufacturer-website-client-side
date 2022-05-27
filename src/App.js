@@ -12,6 +12,7 @@ import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfiles from './Pages/Dashboard/MyProfiles';
+import Payment from './Pages/Dashboard/Payment';
 import Users from './Pages/Dashboard/Users';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -59,6 +60,8 @@ function App() {
             <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
 
             <Route path='addReview' element={<AddReview></AddReview>}></Route>
+
+            <Route path='payment/:id' element={<Payment></Payment>}></Route>
 
             <Route path='manageOrders' element={<ManageAllOrder></ManageAllOrder>}></Route>
 
