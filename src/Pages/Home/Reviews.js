@@ -11,7 +11,7 @@ const Reviews = () => {
 
             {
                 reviews.map((review) => (
-                    <Review key={review.id} 
+                    <Review key={review._id} 
                     review={review}>
                         
                     </Review>
