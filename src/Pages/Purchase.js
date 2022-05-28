@@ -25,7 +25,7 @@ const handleOrder = event =>{
         address: event.target.address.value,
         phone: event.target.phone.value
     }
-    axios.post('http://localhost:5000/order', order)
+    axios.post('https://thawing-river-24903.herokuapp.com/order', order)
     .then(response =>{
         const {data} = response;
         if(data.insertedId){
@@ -44,7 +44,7 @@ const handleOrder = event =>{
         address: event.target.address.value,
         phone: event.target.phone.value
     }
-    axios.post('http://localhost:5000/myOrder', myOrder)
+    axios.post('https://thawing-river-24903.herokuapp.com/myOrder', myOrder)
     .then(response =>{
         const {data} = response;
         if(data.insertedId){
@@ -52,7 +52,6 @@ const handleOrder = event =>{
             event.target.reset();
         }
     })
-
 
 }
 

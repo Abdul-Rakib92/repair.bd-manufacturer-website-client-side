@@ -5,7 +5,7 @@
     
 
 //     useEffect( () => {
-//         fetch('http://localhost:5000/myProfile')
+//         fetch('https://thawing-river-24903.herokuapp.com/myProfile')
 //         .then(res => res.json())
 //         .then(data => setMyProfiles(data));
 //     }, []);

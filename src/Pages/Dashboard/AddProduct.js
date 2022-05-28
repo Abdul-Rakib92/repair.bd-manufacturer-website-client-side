@@ -10,7 +10,7 @@ const AddProduct = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `http://localhost:5000/tool`;
+    const url = `https://thawing-river-24903.herokuapp.com/tool`;
     fetch(url, {
         method: 'POST',
         headers: {

@@ -14,7 +14,7 @@ const CheckoutForm = ({myOrder}) => {
     const {_id, price, name, email} = myOrder;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://thawing-river-24903.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -86,7 +86,7 @@ const CheckoutForm = ({myOrder}) => {
                 myOrder: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/myOrder/${_id}`, {
+            fetch(`https://thawing-river-24903.herokuapp.com/myOrder/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -99,11 +99,7 @@ const CheckoutForm = ({myOrder}) => {
                 console.log(data);
             })
 
-
         }
-
-
-
 
     }
     

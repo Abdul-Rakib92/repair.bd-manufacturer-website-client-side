@@ -10,7 +10,7 @@ const AddProfile = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `http://localhost:5000/myProfile`;
+    const url = `https://thawing-river-24903.herokuapp.com/myProfile`;
     fetch(url, {
         method: 'POST',
         headers: {

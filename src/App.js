@@ -41,12 +41,6 @@ function App() {
        <Route path='blog' element={<Blog></Blog>}></Route>
        <Route path='myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
 
-       {/* <Route path='/addProduct' element={
-          <RequireAuth>
-            <AddProduct></AddProduct>
-          </RequireAuth>
-        }></Route> */}
-
 
        <Route path='dashboard' element={
           <RequireAuth>
@@ -73,41 +67,7 @@ function App() {
 
         </Route>
 
-       {/* <Route path='/myProfile' element={
-          <RequireAuth>
-            <MyProfiles></MyProfiles>
-          </RequireAuth>
-        }></Route> */}
-
-       {/* <Route path='/addProfile' element={
-          <RequireAuth>
-            <AddProfile></AddProfile>
-          </RequireAuth>
-        }></Route> */}
-
-       {/* <Route path='/addReview' element={
-          <RequireAuth>
-            <AddReview></AddReview>
-          </RequireAuth>
-        }></Route> */}
-
-       {/* <Route path="/myOrders" element={
-          <RequireAuth>
-            <MyOrder></MyOrder>
-          </RequireAuth>
-        }></Route> */}
-
-       {/* <Route path="/manageProduct" element={
-          <RequireAuth>
-            <ManageProduct></ManageProduct>
-          </RequireAuth>
-        }></Route> */}
-
-       {/* <Route path="/manageOrders" element={
-          <RequireAuth>
-            <ManageAllOrder></ManageAllOrder>
-          </RequireAuth>
-        }></Route> */}
+       
        <Route path='login' element={<Login></Login>}></Route>
        <Route path='register' element={<Register></Register>}></Route>
        <Route path='*' element={<NotFound></NotFound>}></Route>

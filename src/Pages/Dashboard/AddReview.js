@@ -10,7 +10,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `http://localhost:5000/review`;
+    const url = `https://thawing-river-24903.herokuapp.com/review`;
     fetch(url, {
         method: 'POST',
         headers: {

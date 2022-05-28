@@ -11,7 +11,7 @@ const ManageAllOrder = () => {
   useEffect(() => {
     const getManageOrders = async () => {
       //   const email = user.email;
-      const url = "http://localhost:5000/order";
+      const url = "https://thawing-river-24903.herokuapp.com/order";
       const { data } = await axios.get(url);
       setOrders(data);
     };
@@ -21,7 +21,7 @@ const ManageAllOrder = () => {
   const handleManageDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://thawing-river-24903.herokuapp.com/order/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",
@@ -107,44 +107,6 @@ const ManageAllOrder = () => {
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-    // <div className=" h-screen">
-    //   <h2 className="text-center text-2xl font-bold text-blue-700  ">
-    //     Manage Order
-    //   </h2>
-    //   <h2 className="text-xl font-bold mt-5">Your orders: {orders.length}</h2>
-
-    //   {orders.map((order) => (
-    //     <div className="grid grid-cols-1  md:grid-cols-2" key={order._id}>
-    //       <div className="mt-5">
-    //         <div className="card card-compact border border-red-400  bg-base-100 shadow-xl m-6 p-4">
-    //           <p>Name: {order.name}</p>
-    //           <p>Email: {order.email}</p>
-    //           <p>Tool Name:{order.tool}</p>
-    //           <p>quantity: {order.quantity}</p>
-    //           <p>Address: {order.address}</p>
-    //           <p>Phone: {order.phone}</p>
-
-    //           <button
-    //             className="bg-red-600 text-white text-lg p-3 border-0 rounded-md mx-auto mb-2"
-    //             onClick={() => handleManageDelete(order._id)}
-    //           >
-    //             Delete
-    //           </button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 

@@ -4,7 +4,7 @@ const ManageProduct = () => {
   const [tools, setTools] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tool")
+    fetch("https://thawing-river-24903.herokuapp.com/tool")
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);
@@ -12,7 +12,7 @@ const ManageProduct = () => {
   const handleProductDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/tool/${id}`;
+      const url = `https://thawing-river-24903.herokuapp.com/tool/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",

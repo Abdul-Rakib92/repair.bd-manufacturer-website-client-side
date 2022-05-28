@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L43hsLULnS1QZ2keCYNTbj7JOtPSQvcM1ohA
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/myOrder/${id}`;
+    const url = `https://thawing-river-24903.herokuapp.com/myOrder/${id}`;
 
     const {data: myOrder, isLoading} = useQuery(['myOrder', id], () => fetch(url, {
         method: "GET",

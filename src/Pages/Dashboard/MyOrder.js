@@ -12,7 +12,7 @@ const MyOrder = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/myOrder")
+    fetch("https://thawing-river-24903.herokuapp.com/myOrder")
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
   }, []);
@@ -20,7 +20,7 @@ const MyOrder = () => {
   // useEffect(() => {
   //   const getMyOrders = async () => {
   //     const email = user.email;
-  //     const url = `http://localhost:5000/myOrder?email=${email}`;
+  //     const url = `https://thawing-river-24903.herokuapp.com/myOrder?email=${email}`;
   //     const { data } = await axios.get(url);
   //     setMyOrders(data);
   //   };
@@ -30,7 +30,7 @@ const MyOrder = () => {
   useEffect(() => {
     if (user) {
       const email = user.email;
-      fetch(`http://localhost:5000/myOrder?email=${email}`, {
+      fetch(`https://thawing-river-24903.herokuapp.com/myOrder?email=${email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -54,7 +54,7 @@ const MyOrder = () => {
   const handleMyOrderDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/myOrder/${id}`;
+      const url = `https://thawing-river-24903.herokuapp.com/myOrder/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",
@@ -137,6 +137,9 @@ const MyOrder = () => {
         </table>
       </div>
     </div>
+
+
+
 
     // <div className="h-screen">
     //   <h2 className="text-center text-2xl font-bold text-blue-700 mt-5">

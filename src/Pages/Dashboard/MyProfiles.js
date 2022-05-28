@@ -9,7 +9,7 @@ import MyProfile from "./MyProfile";
 const MyProfiles = () => {
   // const [myProfiles, setMyProfiles] = useProfiles;
 
-  const { data: myProfiles, isLoading } = useQuery('myProfiles', () => fetch('http://localhost:5000/myProfile').then(res => res.json()));
+  const { data: myProfiles, isLoading } = useQuery('myProfiles', () => fetch('https://thawing-river-24903.herokuapp.com/myProfile').then(res => res.json()));
 
 
 
