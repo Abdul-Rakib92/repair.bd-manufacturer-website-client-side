@@ -4,6 +4,10 @@
 
 https://repair-bd.web.app/
 
+## For Admin Access
+Email: mannan@gmail.com
+password: 1234567
+
 
 ## Routes setup and create many component
 ## Login and Registration authentication
